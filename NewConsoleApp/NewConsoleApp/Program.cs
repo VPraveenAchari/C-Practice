@@ -1,0 +1,22 @@
+﻿using System;
+using NewConsoleApp;
+
+Vegitable veg = new Vegitable();
+veg.cityname = "Kurnool";
+veg.vegitablename = "Brinjal";
+veg.category();
+veg.Citydetails();
+Console.WriteLine("---------------------------------------------------");
+Swapping sp=new Swapping();
+sp.a = 90;
+sp.b = 20;
+Console.WriteLine("values before swapping a={0} and b={1}",sp.a,sp.b);
+sp.Swap();
+Console.WriteLine("values after swapping a={0} and b={1}",sp.a, sp.b);
+Console.WriteLine("--------------------------------------------------");
+Shape s =new Shape();
+s.a = 25;
+s.b = 20;
+int ars=s.SquareArea();
+int arr=s.RectangleArea();
+Console.WriteLine("Area of Sqaure is {0} and Area of a Rectangle is {1}",ars,arr);
