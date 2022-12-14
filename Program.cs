@@ -1,26 +1,24 @@
-﻿using System.Security.Principal;
-
-namespace Parameters
+﻿// See https://aka.ms/new-console-template for more information
+using System;
+namespace Inheritance1
 {
-    class Parameters
+    class MainRun
     {
-
-        
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Please enter side of a square");
-            int side= Convert.ToInt32(Console.ReadLine());
-            double perimeter = CalculateCircle(side, out int area);
-            Console.WriteLine("Sqaure perimiter is :{0}", perimeter);
-            Console.WriteLine("Square Area is :{0}", area);
+            Rectangle tr = new Rectangle();
+            Console.WriteLine("Enter m and n value");
+            int m = Convert.ToInt32(Console.ReadLine());
+            int n = Convert.ToInt32(Console.ReadLine());
+            tr.SetWidth(m);
+            tr.SetHeight(n);
+            Console.WriteLine("Rectangle Area is" + tr.GetArea());
+            Console.WriteLine("Triangle Area is" + tr.GetTriangleArea());
+            MainClass m1=new MainClass();
+            m1.call();
+            m1.SendSMS();
             Console.ReadKey();
         }
-
-        static int CalculateCircle(int side, out int area)
-        {
-            area = side * side;
-             int perimeter =4*side;
-            return perimeter;
-        }
     }
+
 }
